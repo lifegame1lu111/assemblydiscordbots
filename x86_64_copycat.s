@@ -37,7 +37,7 @@ skip:
 endp
 
 proc main uses rsi
-    sub rsp, 32
+    sub rsp, 40
     lea rcx, [token]
     call discord_init
     mov rsi, rax
@@ -46,6 +46,6 @@ proc main uses rsi
     call discord_set_on_message_create
     mov rcx, rsi
     call discord_run
-    add rsp, 32
+    add rsp, 40
     ret
 endp
